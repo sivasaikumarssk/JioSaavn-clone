@@ -1,0 +1,18 @@
+.jioNavbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f6f6f6;
+}
+
+.searchBox {
+    flex-basis:40%;
+    border-radius: 2.5rem;
+    height:35px;
+    margin:none auto;
+    align-self: center;
+    border-color: #f6f6f6;
+}
+
+.menuComponent {
+    align-self: center;
+}
