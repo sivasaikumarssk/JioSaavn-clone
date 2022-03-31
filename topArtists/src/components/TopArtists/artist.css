@@ -1,0 +1,23 @@
+.secondaryDiv{
+    width: 200px;
+}
+
+.artistImg{
+    width: 90%;
+    border-radius: 50%;
+}
+.mainDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    
+}
+p{
+    text-align: center;
+}
+.artistName{
+    font-weight: bold;
+}
+h1{
+    font-size: 3rem;
+}
