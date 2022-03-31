@@ -1,6 +1,7 @@
 import artistInfo from "./artist.json";
 import "./artist.css";
 import axios from "axios";
+import uniqid from "uniqid";
 import { useEffect, useState } from "react";
 
 export const Artists = () => {
@@ -20,6 +21,7 @@ export const Artists = () => {
         {artistInfo.selection1.map((e) => {
           return (
             <div
+              key={uniqid()}
               className="secondaryDiv"
               onClick={() => {
                 getSong(e.name);
