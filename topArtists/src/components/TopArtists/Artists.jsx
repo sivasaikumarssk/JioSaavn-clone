@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 export const Artists = () => {
   const [response, setResponse] = useState([]);
+
   const getSong = (name) => {
     axios
       .get(`https://apg-saavn-api.herokuapp.com/result/?q=${name}`)
@@ -27,7 +28,18 @@ export const Artists = () => {
                 getSong(e.name);
               }}
             >
-              <img className="artistImg" src={e.url} alt="" />
+              <div className="container">
+                <img className="artistImg" src={e.url} alt="" />
+                <div className="middle">
+                  <div>
+                    <img
+                      src="https://www.nicepng.com/png/detail/8-80536_circular-play-button-svg-png-icon-free-download.png"
+                      className="logo"
+                      alt="playLogo"
+                    />
+                  </div>
+                </div>
+              </div>
               <p className="artistName">{e.name}</p>
               <p>{Math.floor(Math.random() * 10000000)} Fans</p>
             </div>
