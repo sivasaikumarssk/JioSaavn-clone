@@ -65,7 +65,7 @@ export const Navbar = () => {
 
   const getSong = (name) => {
     axios
-      .get(`https://apg-saavn-api.herokuapp.com/result/?q=${name}&_limit=3`)
+      .get(`https://apg-saavn-api.herokuapp.com/result/?q=${name}`)
       .then((res) => setResponse(res.data))
         
   };
