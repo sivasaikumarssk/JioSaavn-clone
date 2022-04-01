@@ -2,13 +2,6 @@ import { useEffect, useState } from "react"
 import "./charts.css"
 
 export const Chart = () =>{
-    // const[data,setdata] = useState([]);
-
-    // useEffect(()=>{
-    //     axios("https://www.jiosaavn.com/album/biba/98G3uzIs2qQ_").then(({data})=>{
-    //     setdata([...data]);
-    // })
-    // },[])
 
     return (
         <div className="albums">
