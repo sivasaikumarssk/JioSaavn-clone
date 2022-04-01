@@ -11,6 +11,8 @@
 .logo{
     width: 50px;
      transition: .5s ease;
+     border-radius: 50%;
+     
 }
 .logo:hover{
     width: 60px;

@@ -9,7 +9,9 @@ export const Artists = () => {
 
   const getSong = (name) => {
     axios
-      .get(`https://apg-saavn-api.herokuapp.com/result/?q=${name}`)
+      .get(
+        `https://cors-anywhere.herokuapp.com/https://apg-saavn-api.herokuapp.com/result/?q=${name}`
+      )
       .then((res) => setResponse(res.data));
   };
   useEffect(() => {
