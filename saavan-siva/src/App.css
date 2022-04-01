@@ -1,7 +1,9 @@
-.App {
+/* .App {
   text-align: center;
+} */
+*{
+  font-family: Lato,sans-serif;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -39,4 +41,9 @@
 
 button {
   font-size: calc(10px + 2vmin);
+}
+.link_names{
+  display: flex;
+  gap: 3rem;
+  margin-left: 2rem;
 }

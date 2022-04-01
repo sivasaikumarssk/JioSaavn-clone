@@ -1,0 +1,14 @@
+.info_social_media{
+    display: flex;
+    gap: 70%;
+    font-size: smaller;
+}
+
+.info_social_media img{
+    width: 100%;
+    height: 60%;
+}
+.social_media{
+    display: flex;
+    gap: 5%;
+}

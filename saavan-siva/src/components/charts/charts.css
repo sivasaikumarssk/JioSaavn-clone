@@ -1,0 +1,28 @@
+.album_div{
+    /* border: 1px solid gray; */
+    display: grid;
+   grid-template-columns: repeat(4,25%);
+   /* grid-gap: 1.5%; */
+   padding: 5px;
+}
+.album_div > div{
+    /* border: 1px solid red; */
+    
+}
+.albums{
+    /* border: 1px solid black; */
+    width: 95%;
+    margin: auto;
+    
+}
+.album_div > div > img{
+    width: 90%;
+    height: 50%;
+    border-radius: 5px;
+}
+.albums > p{
+    font-size:larger;
+}
+.album_info{
+    text-align: center;
+}

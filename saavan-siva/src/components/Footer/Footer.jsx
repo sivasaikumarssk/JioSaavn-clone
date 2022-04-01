@@ -1,13 +1,23 @@
 import fb from "../Images/fb.png";
-import twitter from "../Images/twitter"
-import insta from "../Images/insta";
-import youtube from "../Images/youtube"
-import linkedin from "../Images/linkedin"
+import twitter from "../Images/twitter.png";
+import instagram from "../Images/instagram.png";
+import youtube from "../Images/youtube.png";
+import "./Footer.css"
 
 export const Footer = () => {
     return (
+        <>
         <div>
-        <div className="footer_div" style={{border:"1px solid red",display:"flex",gap:"9rem",textAlign:"left" ,color:"#3e3e3e",padding:"2rem"}}>
+        <div className="footer_div" style={{
+            // border:"1px solid red",
+            display:"flex",
+            gap:"7rem",
+            textAlign:"left",
+            color:"#3e3e3e",
+            padding:"2rem",
+            
+            }
+            }>
             
             <div>
             <h5>TOP ARTISTS</h5>
@@ -29,7 +39,7 @@ export const Footer = () => {
             <br/>
             <small>Arman Malik</small>
             <br/>
-            </div>,
+            </div>
 
             <div >
             <h5>TOP ACTORS</h5>
@@ -56,7 +66,7 @@ export const Footer = () => {
             <small>Top Charts</small>
             <br/>
             <small>Top Radios</small>
-            </div>,
+            </div>
 
             <div>
             <h5>DEVOTIONAL SONGS</h5>
@@ -67,7 +77,7 @@ export const Footer = () => {
             <small>Ganesh Ji Ki Aarti</small>
             <br/>
             <small>Hanuman Chalisa</small> 
-            </div>,
+            </div>
 
             <div>
             <h5>LANGUAGE</h5>
@@ -81,7 +91,7 @@ export const Footer = () => {
             <br/>
             <small>Kannada Songs</small>
             <br/>
-            </div>,
+            </div>
             
             <div>
             <h5>ARTIST ORIGINALS</h5>
@@ -94,7 +104,7 @@ export const Footer = () => {
             <small>Siri - My Jam</small>
             <br/>
             <small>Lost Stories, "Mai Ni Meriye"</small>
-            </div>,
+            </div>
             
             <div>
             <h5>COMPANY</h5>
@@ -124,7 +134,7 @@ export const Footer = () => {
            
             </div>
             
-        </div>,
+        </div>
        
         
          <div style={{display:"flex",gap:"2%",color:"#3e3e3e"}}>
@@ -133,22 +143,24 @@ export const Footer = () => {
             <small>JioSaavn for Android</small>
             <small>New Releases</small>
             <small>Sitemap</small>
-         </div>,
+         </div>
          
          
-         <div style={{display:"flex",color:"#3e3e3e" }}>
-             <div><p>© 2022 Saavn Media Pvt Ltd</p></div>,
+         <div className="info_social_media" >
+             <div><p>© 2022 Saavn Media Pvt Ltd</p></div>
              
-                 <div>
-                     <img src={fb}/>
-                    <img src={twitter}/>
-                    <img src={youtube}/>
-                    <img src={instagram}/>
-                    <img src={linkedin}/>
+                 <div className="social_media">
+                    <p>Follow Us</p>
+                     <a href="https://www.facebook.com/JioSaavn"><img src={fb}/></a>
+                     <a href="https://twitter.com/JioSaavn"><img src={twitter}/></a>
+                     <a href="https://www.youtube.com/c/JioSaavn"><img src={youtube}/></a>
+                    <a href="https://www.instagram.com/jiosaavn/"><img src={instagram}/></a>
+                    
                     
                  </div>
              
          </div>
          </div>
-    );
+         </>
+    )
 };
