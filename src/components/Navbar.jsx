@@ -28,8 +28,7 @@ export const Navbar = () => {
     }
   };
 
- 
-  if(response.length > 0){
+  if (response.length > 0) {
     PlayerInterface.play([
       new Track(
         response[0].id,
@@ -39,7 +38,7 @@ export const Navbar = () => {
         response[0].media_url
       ),
     ]);
-  
+
     PlayerInterface.playLater([
       new Track(
         response[1].id,
@@ -49,7 +48,7 @@ export const Navbar = () => {
         response[1].media_url
       ),
     ]);
-  
+
     PlayerInterface.playNext([
       new Track(
         response[2].id,
@@ -61,15 +60,13 @@ export const Navbar = () => {
     ]);
   }
 
-  
-
   const getSong = (name) => {
     axios
       .get(`https://apg-saavn-api.herokuapp.com/result/?q=${name}`)
-      .then((res) => setResponse(res.data))
-        
+      .then((res) => setResponse(res.data));
   };
 
+  
   const handleChange = (e) => {
     setText(e.target.value);
   };
@@ -78,11 +75,12 @@ export const Navbar = () => {
     <>
       <div className="jioNavbar">
         <img src={jioIcon} alt="" />
-        <p>Home</p>
-        <p>Browse</p>
-        <p>Upgrade</p>
+        <p className="mediaNone">Home</p>
+        <p className="mediaNone">Browse</p>
+        <p className="mediaNone">Upgrade</p>
         <input
-          className="searchBox"
+          className="searchBox mediaNone"
+          
           type="text"
           placeholder="Search"
           onKeyDown={(e) => {
@@ -90,9 +88,9 @@ export const Navbar = () => {
           }}
           onChange={handleChange}
         />
-        <BasicMenu className="menuComponent" />
-        <p>Login</p>
-        <p>Sign Up</p>
+        <BasicMenu className="menuComponent mediaNone" />
+        <p className="mediaNone">Login</p>
+        <p className="mediaNone">Sign Up</p>
         <Player />
       </div>
     </>
