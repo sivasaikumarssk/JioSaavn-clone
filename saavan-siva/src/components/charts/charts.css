@@ -29,6 +29,11 @@
 .album_info{
     text-align: center;
 }
+h1{
+    font-weight: lighter;
+}
+
+
 
 /* @media (min-width:400px) and (max-width:1000px) {
    .album_div{

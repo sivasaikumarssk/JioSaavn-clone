@@ -28,7 +28,7 @@ export const Chart = () =>{
     //             })}
     
            return <>
-           <p>Top Music Charts</p>
+           <h1>Top Music Charts</h1>
            <div className="album_div">
                
              <div>

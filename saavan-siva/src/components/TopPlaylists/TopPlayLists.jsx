@@ -17,7 +17,7 @@ useEffect(()=>{
 
 return <>
          <div >
-             <p>Top Playlists</p>
+             <h1>Top Playlists</h1>
              <div className="songs_div">
                  {data.map((e,i)=>{
                      console.log("f",e);
