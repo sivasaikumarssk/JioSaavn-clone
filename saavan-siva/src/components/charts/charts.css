@@ -1,3 +1,8 @@
+*{
+    font-family: Lato,sans-serif;
+  }
+
+
 .album_div{
     /* border: 1px solid gray; */
     display: grid;
@@ -16,6 +21,7 @@
     width: 90%;
     height: 50%;
     border-radius: 5px;
+    cursor: pointer;
 }
 .albums > p{
     font-size:larger;
@@ -23,3 +29,18 @@
 .album_info{
     text-align: center;
 }
+
+/* @media (min-width:400px) and (max-width:1000px) {
+   .album_div{
+    display: grid;
+    grid-template-columns: repeat(2,25%);
+
+   }
+   .album_div > div > img{
+    width: 95%;
+    height: 50%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+   
+} */

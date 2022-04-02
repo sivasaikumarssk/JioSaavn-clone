@@ -1,13 +1,37 @@
+import axios from "axios";
 import { useEffect, useState } from "react"
 import "./charts.css"
 
 export const Chart = () =>{
+    // const [data,setData] = useState([]);
+    // useEffect(()=>{
+    //     axios.get("https://saavn.me/search/albums").then((res)=>{
+    //         setData(res.data.results);
+    //         console.log(res.data)
+    //     })
+    // },[]);
 
-    return (
-        <div className="albums">
-            <p>TopMusicCharts</p>
-            <div className="album_div">
-            <div>
+
+    // return <>
+    //     <div className="albums">
+    //         <p>TopMusicCharts</p>
+    //         <div className="album_div">
+    //             {data.map((e,i)=>{
+    //                 console.log("e",e)
+    //                 //if(i <= 13){
+    //                     return <div>
+                            
+    //                         <img src={e.image[2].link}/>
+    //                         <p><h3>{e.name}</h3></p>
+    //                     </div>
+    //               //  }
+    //             })}
+    
+           return <>
+           <p>Top Music Charts</p>
+           <div className="album_div">
+               
+             <div>
                 <img src="https://c.saavncdn.com/editorial/charts_TrendingToday_149406_20220319164713_500x500.jpg" alt="" />
                 <p className="album_info">Trending Today <br />
                 JioSaavan</p>
@@ -31,12 +55,12 @@ export const Chart = () =>{
                 JioSaavan</p>
             
             </div>
-            
-            
             </div>
+            
+            
 
 
-            <div className="album_div">
+             <div className="album_div">
             <div>
                 <img src="https://c.saavncdn.com/editorial/logo/charts_Hindi90s_142072_20190906160631_500x500.jpg" alt="" />
                 <p className="album_info">Hindi 90s <br />
@@ -66,6 +90,6 @@ export const Chart = () =>{
             </div>
             
         
-        </div>
-    )
+       
+        </>
 }

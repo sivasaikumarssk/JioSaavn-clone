@@ -6,18 +6,37 @@ import axios from "axios";
 export const TopPlaylists = ()=>{
     const [data,setData] = useState([]);
 useEffect(()=>{
-    axios("https://apg-saavn-api.herokuapp.com/playlist/?q=https://www.jiosaavn.com/featured/romantic-hits-2020---hindi/ABiMGqjovSFuOxiEGmm6lQ").then((data)=>{
+    axios.get("https://saavn.me/home").then((res)=>{
         
-        setData(data);
-        console.log(data.data.songs);
+        setData(res.data.results.top_playlists);
+        console.log("e" ,res.data.results.top_playlists);
         
         
     })
 },[]);
 
-return(
-   
-<div className="songs_div">
+return <>
+         <div >
+             <p>Top Playlists</p>
+             <div className="songs_div">
+                 {data.map((e,i)=>{
+                     console.log("f",e);
+                     //if(i <= 13){
+                         return <div className="songs_info">
+                            
+                            <img src={e.image}/>
+                           <p>{e.title}</p>
+                           <small>{e.subtitle}</small>
+                        </div>
+                // }
+                 })}
+
+                 </div>
+                 <p><h2>Yay! You have seen it all 🤩</h2></p>
+                 </div>
+
+
+{/* <div className="songs_div">
     <div className="songs_info">
     <img src={data.data.songs[0].image}/> <br />
     <small>{data.data.songs[0].album}</small>        
@@ -108,9 +127,9 @@ return(
 <br />    <small>{data.data.songs[17].album}</small>        
     </div>
 
-</div> 
+</div>  */}
 
-)
 
+</>
 
 }
