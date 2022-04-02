@@ -18,11 +18,11 @@
     align-self: center;
 }
 
-/* @media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
       .mediaNone{
         display:none;
       }
-} */
+}
 
  
 
@@ -45,7 +45,7 @@
 .trending-div{
   display: grid;
   grid-template-columns: repeat(7,9.58%);
-  width: 52%;
+  width: 48%;
   /* border:1px solid red; */
   
 }

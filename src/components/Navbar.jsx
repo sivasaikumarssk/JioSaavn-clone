@@ -94,8 +94,11 @@ export const Navbar = () => {
           onChange={handleChange}
         />
         <BasicMenu className="menuComponent mediaNone" />
-        <p className="mediaNone">Login</p>
-        <p className="mediaNone">Sign Up</p>
+        <p className="mediaNone"
+        onClick={()=>navigate("/login")}>Login</p>
+
+        <p className="mediaNone"
+        onClick={()=>navigate("/register")}>Sign Up</p>
         <Player />
       </div>
     </>

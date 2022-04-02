@@ -1,7 +1,9 @@
 import styled from "styled-components"
 import { Buttons } from "./button"
+import {useNavigate} from "react-router-dom";
 
 export const Navbarlist = ()=>{
+    const navigate = useNavigate();
     const List = styled.div`
     width: 100%;
     height:5rem;
@@ -26,14 +28,20 @@ export const Navbarlist = ()=>{
         <List>
             <div>
             <TextButton >New Releases</TextButton>
-            <TextButton >Charts</TextButton>
-            <TextButton >Top Playlists</TextButton>
+            
+            <TextButton 
+            onClick={()=>navigate("/browse/charts")}>Charts</TextButton>
+            
+            <TextButton
+            onClick={()=>navigate("browse/topplaylists")} >Top Playlists</TextButton>
+            
             <TextButton >Podcasts</TextButton>
-            <TextButton >Top Artists</TextButton>
+            <TextButton 
+            onClick={()=>navigate("/browse/topartists")}>Top Artists</TextButton>
             <TextButton >Radio</TextButton>
             </div>
             <div>
-            {/* <Buttons>Surprise Me</Buttons> */}
+            <Buttons>Surprise Me</Buttons>
             </div>
             
         </List>

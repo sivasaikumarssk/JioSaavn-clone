@@ -8,6 +8,9 @@ import { Routes, Route } from "react-router-dom";
 
 import {Routing} from "./Routes/routes"
 
+import {Signup} from "./components/Signup/Signup"
+import {Login} from "./components/Login/Login"
+
 function App() {
   return (
     <div>
@@ -15,6 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePageEle />} />
         <Route path="/browse/*" element={<Routing/>}/>
+        <Route path="/register" element={<Signup/>}/>
+        <Route path="/login" element={<Login/>}/>
       </Routes>
     </div>
   );

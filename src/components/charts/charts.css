@@ -1,0 +1,51 @@
+*{
+    font-family: Lato,sans-serif;
+  }
+
+
+.album_div{
+    /* border: 1px solid gray; */
+    display: grid;
+   grid-template-columns: repeat(4,25%);
+   /* grid-gap: 1.5%; */
+   padding: 5px;
+}
+
+.albums{
+    /* border: 1px solid black; */
+    width: 95%;
+    margin: auto;
+    
+}
+.album_div > div > img{
+    width: 90%;
+    height: 50%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.albums > p{
+    font-size:larger;
+}
+.album_info{
+    text-align: center;
+}
+h1{
+    font-weight: lighter;
+}
+
+
+
+/* @media (min-width:400px) and (max-width:1000px) {
+   .album_div{
+    display: grid;
+    grid-template-columns: repeat(2,25%);
+
+   }
+   .album_div > div > img{
+    width: 95%;
+    height: 50%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+   
+} */
