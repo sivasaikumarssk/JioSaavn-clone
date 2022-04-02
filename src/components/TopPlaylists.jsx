@@ -14,8 +14,8 @@ export const TopPlay = () => {
         <h2 className="name">Top Charts</h2>
         <div className="playlist-div">
 
-        {data.map((e)=>{
-            return <div className="playlist-item">
+        {data.map((e,i)=>{
+            return <div className="playlist-item" key={i}>
 
             <img src={e.image} alt="" />
             <p className="Songs-title">{e.title}</p>

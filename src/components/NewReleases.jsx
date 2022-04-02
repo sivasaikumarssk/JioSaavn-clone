@@ -15,7 +15,7 @@ export const NewReleases = () => {
     <div className="playlist-div">
     {data.map((e,i)=>{
        if(i<=13){
-        return <div className="playlist-item">
+        return <div className="playlist-item" key={i}>
         <img src={e.image} alt="" />
         <p className="Songs-title">{e.title}</p>
     </div>

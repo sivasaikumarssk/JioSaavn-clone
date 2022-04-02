@@ -12,11 +12,11 @@ export const HiThere = () => {
     <div >
         <h2>Hi There</h2>
         <p>TRENDING NOW</p>    
-        <div className="trending-div">
+        <div className="trending-div" >
         {data.map((e,i)=>{
            if(i <=13){
-            return  <div className="trending-item"
-            >
+            return  <div className="trending-item" key={i}
+           >
             <img src={e.image} alt="" />
             <p className="Songs-title">{e.title}</p>
             {/* <p>{e.more_info.fan_count}</p> */}

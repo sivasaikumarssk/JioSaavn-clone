@@ -18,7 +18,7 @@ export const Discover = () => {
         {data.map((e, i) => {
           if (i >= 36 && i <50) {
             return (
-              <div className="playlist-item">
+              <div className="playlist-item" key={i}>
                 <img src={e.image} alt="" />
                 <p className="Songs-title">{e.title}</p>
               </div>

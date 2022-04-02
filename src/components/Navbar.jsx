@@ -4,12 +4,14 @@ import Player from "react-material-music-player";
 import { Track, PlayerInterface } from "react-material-music-player";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 // console.log(uuid())
 
 export const Navbar = () => {
   const [text, setText] = useState("");
   const [response, setResponse] = useState([]);
+  const navigate = useNavigate();
 
   // PlayerInterface.play([
   //   new Track(
@@ -75,8 +77,11 @@ export const Navbar = () => {
     <>
       <div className="jioNavbar">
         <img src={jioIcon} alt="" />
-        <p className="mediaNone">Home</p>
-        <p className="mediaNone">Browse</p>
+        <p className="mediaNone"
+        onClick={()=>navigate("/")}>Home</p>
+        
+        <p className="mediaNone"
+        onClick={()=>navigate("/browse")}>Browse</p>
         <p className="mediaNone">Upgrade</p>
         <input
           className="searchBox mediaNone"
