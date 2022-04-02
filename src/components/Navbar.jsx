@@ -34,39 +34,47 @@ export const Navbar = () => {
     PlayerInterface.play([
       new Track(
         response[0].id,
-        response[0].image,
-        response[0].album,
-        "arijit",
-        response[0].media_url
+        response[0].image[0].link,
+        response[0].album.name,
+        response[0].artist,
+        response[0].downloadUrl[3].link
       ),
     ]);
 
     PlayerInterface.playLater([
       new Track(
         response[1].id,
-        response[1].image,
-        response[1].album,
-        "arijit",
-        response[1].media_url
+        response[1].image[0].link,
+        response[1].album.name,
+        response[1].artist,
+        response[1].downloadUrl[3].link
       ),
     ]);
 
     PlayerInterface.playNext([
       new Track(
         response[2].id,
-        response[2].image,
-        response[2].album,
-        "arijit",
-        response[2].media_url
+        response[2].image[0].link,
+        response[2].album.name,
+        response[2].artist,
+        response[2].downloadUrl[3].link
       ),
     ]);
   }
 
+ 
+
+  // const getSong = (name) => {
+  //   axios
+  //     .get(`https://apg-saavn-api.herokuapp.com/result/?q=${name}`)
+  //     .then((res) => setResponse(res.data));
+  // };
+
   const getSong = (name) => {
     axios
-      .get(`https://apg-saavn-api.herokuapp.com/result/?q=${name}`)
-      .then((res) => setResponse(res.data));
-  };
+    .get(`https://saavn.me/search/songs?query=${name}`)
+    .then((res)=>setResponse(res.data.results));
+  }
 
   
   const handleChange = (e) => {
