@@ -1,19 +1,22 @@
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 export const SongCard = ({image,title})=>{
-    const [response, setResponse] = useState([]);
-    
-    //console.log(title)
-    const getSong = (name)=>{
-        //console.log(title)
-        axios
+  //console.log(title)
+  const [response, setResponse] = useState([]);
+
+  const getSong = (name) => {
+    axios
       .get(
-        `https://apg-saavn-api.herokuapp.com/result/?q=${name}`
+        `https://saavn.me/search/albums?query=${name}`
       )
-      .then((res) => setResponse(res.data));
-    }
-    //console.log(response);
+      .then((res) => setResponse([...res.data.results]));
+  };
+  //useEffect(() => {
+    console.log(response);
+  //}, [response]);
+    
+
     return (
                     <Link to={""} style={{textDecoration:"none",color:"black"}} onClick={()=>{getSong(title)}}> 
                         <img style={{width: "100%",height: "60%", borderRadius: "4%",}} src={image} alt="" />

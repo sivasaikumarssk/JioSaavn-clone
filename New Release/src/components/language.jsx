@@ -10,9 +10,9 @@ export const Language = ()=>{
     const [Newsongs,setNewsongs] = useState([]);
 
     useEffect(()=>{
-        axios.get(`https://apg-saavn-api.herokuapp.com/result/?q=${language}`).then((res)=>{
-            //console.log(res)
-            setNewsongs([...res.data]);
+        axios.get(`https://saavn.me/search/albums?query=${language}`).then((res)=>{
+            console.log(res)
+            setNewsongs([...res.data.results]);
         })
     },[language]);
 
@@ -29,7 +29,7 @@ export const Language = ()=>{
         <Songs>
             {Newsongs.map((el)=>{
                 return (
-                    <SongCard key={el.id} image={el.image} title ={el.song}></SongCard>
+                    <SongCard key={el.id} image={el.image[2].link} title ={el.name}></SongCard>
                 )
             })}
         </Songs>

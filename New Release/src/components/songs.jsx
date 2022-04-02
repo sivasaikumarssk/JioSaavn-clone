@@ -9,9 +9,9 @@ export const Songs = ()=>{
     const [Newsongs,setNewsongs] = useState([]);
 
     useEffect(()=>{
-        axios.get("https://apg-saavn-api.herokuapp.com/playlist/?q=https://www.jiosaavn.com/featured/romantic-hits-2020---hindi/ABiMGqjovSFuOxiEGmm6lQ").then((res)=>{
+        axios.get("https://saavn.me/trending").then((res)=>{
             console.log(res)
-            setNewsongs([...res.data.songs]);
+            setNewsongs([...res.data.results]);
         })
     },[]);
 
@@ -30,7 +30,7 @@ export const Songs = ()=>{
         <Songs>
             {Newsongs.map((el)=>{
                 return (
-                    <SongCard key={el.id} image={el.image} title ={el.song} media_url={el.media_url} Newsongs={Newsongs}></SongCard>
+                    <SongCard key={el.id} image={el.image} title ={el.title} media_url={el.media_url} Newsongs={Newsongs}></SongCard>
                 )
             })}
         </Songs>
