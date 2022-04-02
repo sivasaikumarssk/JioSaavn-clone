@@ -11,6 +11,8 @@ import {Routing} from "./Routes/routes"
 import {Signup} from "./components/Signup/Signup"
 import {Login} from "./components/Login/Login"
 
+import {Footer } from "./components/Footer/Footer"
+
 function App() {
   return (
     <div>
@@ -21,6 +23,7 @@ function App() {
         <Route path="/register" element={<Signup/>}/>
         <Route path="/login" element={<Login/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 }
