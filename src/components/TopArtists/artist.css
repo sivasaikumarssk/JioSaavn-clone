@@ -28,7 +28,7 @@
 }
 
 
-.ArtistContainer:hover .middle {
+.ArtistContainer:hover .ArtistMiddle {
   opacity: 1;
   
 }

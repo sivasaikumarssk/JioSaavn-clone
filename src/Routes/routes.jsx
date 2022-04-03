@@ -5,13 +5,11 @@ import { Navbarlist } from "../components/Nav-list";
 import { Navbarlang } from "../components/Nav-Lang";
 import { Songs } from "../components/songs";
 import styled from "styled-components";
-import {Artists} from "../components/TopArtists/Artists"
-import {Chart} from "../components/charts/Charts"
-import {TopPlaylists} from "../components/TopPlaylistsSongs/TopPlayLists"
-
+import { Artists } from "../components/TopArtists/Artists";
+import { Chart } from "../components/charts/Charts";
+import { TopPlaylists } from "../components/TopPlaylistsSongs/TopPlayLists";
 
 export const Routing = () => {
-  
   const Container = styled.div`
     border: 1px solid black;
     display: flex;
@@ -29,11 +27,11 @@ export const Routing = () => {
         <Navbarlang />
 
         <Routes>
-          <Route path="/" element={<Songs />}/>
+          <Route path="/" element={<Songs />} />
           <Route path="/:language" element={<Language />} />
-          <Route path="/artists" element={<Artists/>}/>
-          <Route path="/charts" element={<Chart/>}/>
-          <Route path="/topplaylists" element={<TopPlaylists/>}/>
+          <Route path="/topartists" element={<Artists />} />
+          <Route path="/charts" element={<Chart />} />
+          <Route path="/topplaylists" element={<TopPlaylists />} />
         </Routes>
       </Main>
     </Container>
