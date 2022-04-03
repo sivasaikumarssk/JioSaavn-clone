@@ -3,21 +3,21 @@ import "./artist.css";
 import axios from "axios";
 import uniqid from "uniqid";
 import { useEffect, useState } from "react";
-import { useDispatch,useSelector } from "react-redux";
-import {getSong} from "../../../Redux/action"
-import {store} from "../../../Redux/store"
+import { useDispatch, useSelector } from "react-redux";
+import { getSong } from "../../../Redux/action";
+import { store } from "../../../Redux/store";
 
 export const Artists = () => {
   const [response, setResponse] = useState([]);
-  const dispatch = useDispatch()
-
+  const [res, setRes] = useState("");
+  const dispatch = useDispatch();
   const handleClick = (name) => {
-    
-   dispatch(getSong(name))
+    dispatch(getSong(name));
+    setRes(name);
   };
   useEffect(() => {
-    console.log(response);
-  }, [response]);
+    dispatch(getSong(res));
+  }, [res]);
   return (
     <>
       <h1 id="ArtistMainHeading">Top Artists</h1>
@@ -28,7 +28,7 @@ export const Artists = () => {
               key={uniqid()}
               className="ArtistSecondaryDiv"
               onClick={() => {
-                handleClick(ele.name)
+                handleClick(ele.name);
               }}
             >
               <div className="ArtistContainer">

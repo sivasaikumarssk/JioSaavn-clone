@@ -7,7 +7,7 @@ import { Songs } from "../components/songs";
 import styled from "styled-components";
 import { Artists } from "../components/TopArtists/Artists";
 import { Chart } from "../components/charts/Charts";
-import { TopPlaylists } from "../components/TopPlaylistsSongs/TopPlayLists";
+import { TopPlayLists } from "../components/TopPlaylistsSongs/TopPlayLists";
 
 export const Routing = () => {
   const Container = styled.div`
@@ -31,7 +31,7 @@ export const Routing = () => {
           <Route path="/:language" element={<Language />} />
           <Route path="/topartists" element={<Artists />} />
           <Route path="/charts" element={<Chart />} />
-          <Route path="/topplaylists" element={<TopPlaylists />} />
+          <Route path="/topplaylists" element={<TopPlayLists />} />
         </Routes>
       </Main>
     </Container>

@@ -4,7 +4,9 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { getSong } from "../../../Redux/action";
 
-export const TopPlaylists = () => {
+export const TopPlayLists = () => {
+  const [res, setRes] = useState("");
+
   const [data, setData] = useState([]);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -14,8 +16,13 @@ export const TopPlaylists = () => {
   }, []);
 
   const handleClick = (name) => {
-      dispatch(getSong(name))
-  }
+    dispatch(getSong(name));
+    setRes(name);
+  };
+  useEffect(() => {
+    dispatch(getSong(res));
+    console.log(response);
+  }, [res]);
 
   return (
     <>

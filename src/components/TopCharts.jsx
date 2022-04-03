@@ -3,9 +3,10 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { getSong } from "../../Redux/action";
 
-export const TopPlay = () => {
+export const TopCharts = () => {
   const [data, setData] = useState([]);
- 
+  const [res, setRes] = useState("");
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -15,19 +16,25 @@ export const TopPlay = () => {
   }, []);
 
   const handleClick = (name) => {
-    
     dispatch(getSong(name));
+    setRes(name);
   };
+  useEffect(() => {
+    dispatch(getSong(res));
+  }, [res]);
 
   return (
     <>
       <div>
         <h2 className="name">Top Charts</h2>
-        <div className="playlist-div" >
+        <div className="playlist-div">
           {data.map((ele, i) => {
             return (
-              <div className="playlist-item" key={i}
-              onClick={()=>handleClick(ele.title)}>
+              <div
+                className="playlist-item"
+                key={i}
+                onClick={() => handleClick(ele.title)}
+              >
                 <img src={ele.image} alt="" />
                 <p className="Songs-title">{ele.title}</p>
               </div>

@@ -5,6 +5,7 @@ import { getSong } from "../../Redux/action";
 
 export const Discover = () => {
   const [data, setData] = useState([]);
+  const [res, setRes] = useState("");
   const dispatch = useDispatch();
   console.log(data);
   useEffect(() => {
@@ -14,8 +15,12 @@ export const Discover = () => {
   }, []);
 
   const handleClick = (name) => {
-    dispatch(getSong(name))
-  }
+    dispatch(getSong(name));
+    setRes(name);
+  };
+  useEffect(() => {
+    dispatch(getSong(res));
+  }, [res]);
 
   return (
     <>
@@ -23,9 +28,13 @@ export const Discover = () => {
 
       <div className="playlist-div">
         {data.map((ele, i) => {
-          if (i >= 36 && i <50) {
+          if (i >= 36 && i < 50) {
             return (
-              <div className="playlist-item" key={i} onClick={() =>handleClick(ele.title)}>
+              <div
+                className="playlist-item"
+                key={i}
+                onClick={() => handleClick(ele.title)}
+              >
                 <img src={ele.image} alt="" />
                 <p className="Songs-title">{ele.title}</p>
               </div>

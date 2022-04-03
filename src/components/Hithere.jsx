@@ -5,6 +5,7 @@ import { getSong } from "../../Redux/action";
 
 export const HiThere = () => {
   const [data, setData] = useState([]);
+  const [res, setRes] = useState("");
 
   const dispatch = useDispatch();
 
@@ -16,7 +17,11 @@ export const HiThere = () => {
 
   const handleClick = (name) => {
     dispatch(getSong(name));
+    setRes(name);
   };
+  useEffect(() => {
+    dispatch(getSong(res));
+  }, [res]);
 
   return (
     <>
