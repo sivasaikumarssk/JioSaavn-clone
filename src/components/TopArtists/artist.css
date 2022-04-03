@@ -20,7 +20,7 @@
 
 .artistImg:hover{
     cursor: pointer;
-    
+
 }
 
 .ArtistContainer:hover .artistImg{
@@ -28,8 +28,9 @@
 }
 
 
-.ArtistContainer:hover .middle {
+.ArtistContainer:hover .ArtistMiddle {
   opacity: 1;
+  
   
 }
 .ArtistMiddle {
