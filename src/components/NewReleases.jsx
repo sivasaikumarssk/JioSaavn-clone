@@ -20,11 +20,11 @@ export const NewReleases = () => {
     <h2 className="name">New Releases</h2>
     
     <div className="playlist-div">
-    {data.map((e,i)=>{
+    {data.map((el,i)=>{
        if(i<=13){
-        return <div className="playlist-item" key={i} onClick={() =>handleClick(e.title)}>
-        <img src={e.image} alt="" />
-        <p className="Songs-title">{e.title}</p>
+        return <div className="playlist-item" key={i} onClick={() =>handleClick(el.title)}>
+        <img src={el.image} alt="" />
+        <p className="Songs-title">{el.title}</p>
     </div>
        }
     })}

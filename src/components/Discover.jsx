@@ -22,12 +22,12 @@ export const Discover = () => {
       <h2 className="name">Discover Artists</h2>
 
       <div className="playlist-div">
-        {data.map((e, i) => {
+        {data.map((ele, i) => {
           if (i >= 36 && i <50) {
             return (
-              <div className="playlist-item" key={i} onClick={() =>handleClick(e.title)}>
-                <img src={e.image} alt="" />
-                <p className="Songs-title">{e.title}</p>
+              <div className="playlist-item" key={i} onClick={() =>handleClick(ele.title)}>
+                <img src={ele.image} alt="" />
+                <p className="Songs-title">{ele.title}</p>
               </div>
             );
           }

@@ -3,10 +3,9 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { getSong } from "../../Redux/action";
 
-
 export const HiThere = () => {
   const [data, setData] = useState([]);
-  
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,7 +15,6 @@ export const HiThere = () => {
   }, []);
 
   const handleClick = (name) => {
-      
     dispatch(getSong(name));
   };
 
@@ -26,16 +24,16 @@ export const HiThere = () => {
         <h2>Hi There</h2>
         <p>TRENDING NOW</p>
         <div className="trending-div">
-          {data.map((e, i) => {
+          {data.map((ele, i) => {
             if (i <= 13) {
               return (
                 <div
                   className="trending-item"
                   key={i}
-                  onClick={() => handleClick(e.title)}
+                  onClick={() => handleClick(ele.title)}
                 >
-                  <img src={e.image} alt="" />
-                  <p className="Songs-title">{e.title}</p>
+                  <img src={ele.image} alt="" />
+                  <p className="Songs-title">{ele.title}</p>
                   {/* <p>{e.more_info.fan_count}</p> */}
                 </div>
               );

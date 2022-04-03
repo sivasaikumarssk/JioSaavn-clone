@@ -22,18 +22,18 @@ export const TopPlaylists = () => {
       <div>
         <h1>Top Playlists</h1>
         <div className="songs_div">
-          {data.map((e, i) => {
-            console.log("f", e);
+          {data.map((ele, i) => {
+            console.log("f", ele);
             //if(i <= 13){
             return (
               <div
                 className="songs_info"
                 key={i}
-                onClick={() => handleClick(e.title)}
+                onClick={() => handleClick(ele.title)}
               >
-                <img src={e.image} />
-                <p>{e.title}</p>
-                <small>{e.subtitle}</small>
+                <img src={ele.image} />
+                <p>{ele.title}</p>
+                <small>{ele.subtitle}</small>
               </div>
             );
             // }

@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 // console.log(uuid())
 
 export const Navbar = () => {
-  const [song, setSong] = useState("arijit");
+  const [song, setSong] = useState("");
   const item = useSelector((store) => store);
   const [text, setText] = useState("");
   const [response, setResponse] = useState([]);

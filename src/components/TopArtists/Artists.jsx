@@ -22,17 +22,17 @@ export const Artists = () => {
     <>
       <h1 id="ArtistMainHeading">Top Artists</h1>
       <div className="ArtistMainDiv">
-        {artistInfo.selection1.map((e) => {
+        {artistInfo.selection1.map((ele) => {
           return (
             <div
               key={uniqid()}
               className="ArtistSecondaryDiv"
               onClick={() => {
-                handleClick(e.name)
+                handleClick(ele.name)
               }}
             >
               <div className="ArtistContainer">
-                <img className="artistImg" src={e.url} alt="" />
+                <img className="artistImg" src={ele.url} alt="" />
                 <div className="ArtistMiddle">
                   <div>
                     <img
@@ -43,7 +43,7 @@ export const Artists = () => {
                   </div>
                 </div>
               </div>
-              <p className="artistName">{e.name}</p>
+              <p className="artistName">{ele.name}</p>
               <p>{Math.floor(Math.random() * 10000000)} Fans</p>
             </div>
           );

@@ -6,7 +6,7 @@ import {useDispatch} from "react-redux";
 import {getSong} from "../../Redux/action"
 
 export const SongCard = ({image,title})=>{
-const [response, setResponse] = useState([]);
+
 const dispatch = useDispatch();
 
   const handleClick = (name) => {
