@@ -5,27 +5,24 @@ import { Track, PlayerInterface } from "react-material-music-player";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 // console.log(uuid())
 
 export const Navbar = () => {
+  const [song, setSong] = useState("arijit");
+  const item = useSelector((store) => store);
   const [text, setText] = useState("");
   const [response, setResponse] = useState([]);
   const navigate = useNavigate();
 
-  // PlayerInterface.play([
-  //   new Track(
-  //     "1",
-  //     "",
-  //     "Arijit Singh",
-  //     "Arijit Singh",
-  //     "http://h.saavncdn.com/987/cd902d048c13e5ce6ca84cc409746a5d.mp3"
-  //  )
-  // ])
+  useEffect(() => {
+    setSong(item!==undefined?item.store:"arijit")
+      getSong(song)
+  }, [item]);
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      //make network request;
       getSong(text);
     }
   };
@@ -62,8 +59,6 @@ export const Navbar = () => {
     ]);
   }
 
- 
-
   // const getSong = (name) => {
   //   axios
   //     .get(`https://apg-saavn-api.herokuapp.com/result/?q=${name}`)
@@ -72,11 +67,10 @@ export const Navbar = () => {
 
   const getSong = (name) => {
     axios
-    .get(`https://saavn.me/search/songs?query=${name}`)
-    .then((res)=>setResponse(res.data.results));
-  }
+      .get(`https://saavn.me/search/songs?query=${name}`)
+      .then((res) => setResponse(res.data.results));
+  };
 
-  
   const handleChange = (e) => {
     setText(e.target.value);
   };
@@ -85,15 +79,16 @@ export const Navbar = () => {
     <>
       <div className="jioNavbar">
         <img src={jioIcon} alt="" />
-        <p className="mediaNone"
-        onClick={()=>navigate("/")}>Home</p>
-        
-        <p className="mediaNone"
-        onClick={()=>navigate("/browse")}>Browse</p>
+        <p className="mediaNone" onClick={() => navigate("/")}>
+          Home
+        </p>
+
+        <p className="mediaNone" onClick={() => navigate("/browse")}>
+          Browse
+        </p>
         <p className="mediaNone">Upgrade</p>
         <input
           className="searchBox mediaNone"
-          
           type="text"
           placeholder="Search"
           onKeyDown={(e) => {
@@ -102,11 +97,13 @@ export const Navbar = () => {
           onChange={handleChange}
         />
         <BasicMenu className="menuComponent mediaNone" />
-        <p className="mediaNone"
-        onClick={()=>navigate("/login")}>Login</p>
+        <p className="mediaNone" onClick={() => navigate("/login")}>
+          Login
+        </p>
 
-        <p className="mediaNone"
-        onClick={()=>navigate("/register")}>Sign Up</p>
+        <p className="mediaNone" onClick={() => navigate("/register")}>
+          Sign Up
+        </p>
         <Player />
       </div>
     </>

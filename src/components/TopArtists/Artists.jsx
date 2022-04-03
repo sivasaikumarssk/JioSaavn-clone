@@ -3,16 +3,17 @@ import "./artist.css";
 import axios from "axios";
 import uniqid from "uniqid";
 import { useEffect, useState } from "react";
+import { useDispatch,useSelector } from "react-redux";
+import {getSong} from "../../../Redux/action"
+import {store} from "../../../Redux/store"
 
 export const Artists = () => {
   const [response, setResponse] = useState([]);
+  const dispatch = useDispatch()
 
-  const getSong = (name) => {
-    axios
-      .get(
-        `https://cors-anywhere.herokuapp.com/https://apg-saavn-api.herokuapp.com/result/?q=${name}`
-      )
-      .then((res) => setResponse(res.data));
+  const handleClick = (name) => {
+    
+   dispatch(getSong(name))
   };
   useEffect(() => {
     console.log(response);
@@ -27,7 +28,7 @@ export const Artists = () => {
               key={uniqid()}
               className="ArtistSecondaryDiv"
               onClick={() => {
-                getSong(e.name);
+                handleClick(e.name)
               }}
             >
               <div className="ArtistContainer">

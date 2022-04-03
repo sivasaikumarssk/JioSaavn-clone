@@ -2,7 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import "./charts.css"
 
+
 export const Chart = () =>{
+  
+
+   
     // const [data,setData] = useState([]);
     // useEffect(()=>{
     //     axios.get("https://saavn.me/search/albums").then((res)=>{
@@ -29,7 +33,7 @@ export const Chart = () =>{
     
            return <>
            <h1>Top Music Charts</h1>
-           <div className="album_div">
+           <div className="album_div" >
                
              <div>
                 <img src="https://c.saavncdn.com/editorial/charts_TrendingToday_149406_20220319164713_500x500.jpg" alt="" />
