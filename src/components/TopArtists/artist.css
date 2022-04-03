@@ -1,0 +1,74 @@
+.ArtistSecondaryDiv{
+    width: 200px;
+   
+
+   
+}
+.ArtistContainer{
+    width: 200px;
+    position: relative;
+}
+.ArtistLogo{
+    width: 50px;
+     transition: .5s ease;
+     border-radius: 50%;
+     
+}
+.ArtistLogo:hover{
+    width: 60px;
+}
+
+.artistImg:hover{
+    cursor: pointer;
+    
+}
+
+.ArtistContainer:hover .artistImg{
+  opacity: 0.5;
+}
+
+
+.ArtistContainer:hover .ArtistMiddle {
+  opacity: 1;
+  
+}
+.ArtistMiddle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.artistImg{
+    width: 90%;
+    border-radius: 50%;
+     opacity: 1;
+  display: block;
+
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+
+}
+.ArtistContainer:hover{
+    cursor: pointer;
+}
+.ArtistMainDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    
+}
+p{
+    text-align: center;
+}
+.artistName{
+    font-weight: bold;
+}
+h1{
+    font-size: 2rem;
+}

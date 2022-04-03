@@ -1,0 +1,81 @@
+.jioNavbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f6f6f6;
+  border: 1px solid transparent;
+}
+
+.searchBox {
+    flex-basis:40%;
+    border-radius: 2.5rem;
+    height:35px;
+    margin:none auto;
+    align-self: center;
+    border-color: #f6f6f6;
+}
+
+.menuComponent {
+    align-self: center;
+}
+
+@media only screen and (max-width: 1000px) {
+      .mediaNone{
+        display:none;
+      }
+}
+
+.mediaNone{
+  cursor:pointer;
+}
+ 
+
+.starting-div{
+  display: flex;
+  /* width: 100%; */
+  /* border: 1px solid blue; */
+  /* justify-content: space-evenly; */
+  /* gap: 1%; */
+}
+
+.Library-div{
+  
+  padding: 5%;
+} 
+.Library-div>p{
+  display: flex;
+}
+
+.trending-div{
+  display: grid;
+  grid-template-columns: repeat(7,9.58%);
+  width: 48%;
+  /* border:1px solid red; */
+  
+}
+.trending-item{
+  display: flex;
+  flex-direction: column; 
+  width:78%;
+  cursor: pointer;
+}
+
+.Songs-title{
+  font-weight: bold;
+  color:grey;
+}
+
+.name{
+  margin-left: 15%;
+}
+
+.playlist-div{
+  display: grid;
+  grid-template-columns: repeat(7,14%);
+  margin-left: 15.8%;
+}
+.playlist-item{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  cursor: pointer;
+}
