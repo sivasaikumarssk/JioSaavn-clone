@@ -54,10 +54,10 @@ To run, follow these steps:
 - Mongo DB
 
 # Creators
-@Sathish-02
-@tushar8342
-@shailendra-k1245
-@sivasaikumarssk
-@vatsyaashutosh
-@avinash
+- @Sathish-02
+- @tushar8342
+- @shailendra-k1245
+- @sivasaikumarssk
+- @vatsyaashutosh
+- @avinash
 
