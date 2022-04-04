@@ -31,10 +31,10 @@ Want to run in your local Machine? Great!
 
 To run, follow these steps:
 
-Clone my repository https://github.com/tushar8342/JioSaavn-clone
-Open the code in your VS code
-Install all those Packages by using npm install/i
-Initialise the server npm run start on terminal
+ - Clone my repository https://github.com/tushar8342/JioSaavn-clone
+- Open the code in your VS code
+- Install all those Packages by using npm install/i
+- Initialise the server npm run start on terminal
 
 # Pages Build
 Home Page
