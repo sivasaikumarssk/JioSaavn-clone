@@ -1,6 +1,5 @@
 import artistInfo from "./artist.json";
 import "./artist.css";
-import axios from "axios";
 import uniqid from "uniqid";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
