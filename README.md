@@ -54,10 +54,10 @@ To run, follow these steps:
 - Mongo DB
 
 # Creators
-- <a href="https://github.com/Sathish-02">Sathish</a>
-- <a href="https://github.com/tushar8342">Tushar</a>
-- <a href="https://github.com/shailendra-k1245">Shailendra</a>
-- <a href="https://github.com/sivasaikumarssk">Siva sai kumar</a>
-- <a href="https://github.com/vatsyaashutosh">Vatsya Ashutosh</a>
-- <a href="https://github.com/avinash">Avinash</a>
+- <a target="_blank" href="https://github.com/Sathish-02">Sathish</a>
+- <a target="_blank" href="https://github.com/tushar8342">Tushar</a>
+- <a target="_blank" href="https://github.com/shailendra-k1245">Shailendra</a>
+- <a target="_blank" href="https://github.com/sivasaikumarssk">Siva sai kumar</a>
+- <a target="_blank" href="https://github.com/vatsyaashutosh">Vatsya Ashutosh</a>
+- <a target="_blank" href="https://github.com/avinash">Avinash</a>
 
