@@ -21,7 +21,7 @@ export const TopPlayLists = () => {
   };
   useEffect(() => {
     dispatch(getSong(res));
-    console.log(response);
+    // console.log(response);
   }, [res]);
 
   return (
