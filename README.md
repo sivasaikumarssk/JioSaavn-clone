@@ -59,5 +59,4 @@ To run, follow these steps:
 - <a target="_blank" href="https://github.com/shailendra-k1245">Shailendra</a>
 - <a target="_blank" href="https://github.com/sivasaikumarssk">Siva sai kumar</a>
 - <a target="_blank" href="https://github.com/vatsyaashutosh">Vatsya Ashutosh</a>
-- <a target="_blank" href="https://github.com/avinash">Avinash</a>
 
